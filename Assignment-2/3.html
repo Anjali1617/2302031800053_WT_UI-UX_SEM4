@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Sign Up Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #a9a4a0;
+        }
+        
+        .signup-container {
+            width: 90%;
+            max-width: 450px;
+        }
+        
+        .signup-header {
+            text-align: center;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .signup-box {
+            background-image: url('/api/placeholder/800/600');
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .signup-title {
+            background-color: white;
+            padding: 15px 30px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .input-group {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .input-field {
+            width: 100%;
+            padding: 12px 15px 12px 45px;
+            border: none;
+            border-radius: 30px;
+            background-color: white;
+            font-size: 16px;
+            outline: none;
+        }
+        
+        .input-icon {
+            position: relative;
+        }
+        
+        .input-icon::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .email-icon::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z'/%3E%3C/svg%3E");
+        }
+        
+        .password-icon::before {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23333'%3E%3Cpath d='M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z'/%3E%3C/svg%3E");
+        }
+        
+        .signup-button {
+            background-color: #ffeb3b;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 40px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .signup-button:hover {
+            background-color: #fdd835;
+        }
+        
+        .signup-with {
+            color: white;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        
+        .social-icon img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <div class="signup-header">SIGN UP PAGE</div>
+        
+        <div class="signup-box">
+            <div class="signup-title">Sign Up to Continue</div>
+            
+            <div class="input-group">
+                <div class="input-icon email-icon">
+                    <input type="email" class="input-field" placeholder="Enter Your Email" id="email">
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <div class="input-icon password-icon">
+                    <input type="password" class="input-field" placeholder="Create Password" id="password">
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <div class="input-icon password-icon">
+                    <input type="password" class="input-field" placeholder="Confirm Password" id="confirm-password">
+                </div>
+            </div>
+            
+            <button class="signup-button"><a href="4.html">Sign up</a></button>
+            
+            <div class="signup-with">Sign Up With</div>
+            
+            <div class="social-icons">
+                <div class="social-icon">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%234285F4' d='M12.545 10.239v3.821h5.445c-.712 2.315-2.647 3.972-5.445 3.972a6.033 6.033 0 110-12.064c1.498 0 2.866.549 3.921 1.453l2.814-2.814A9.969 9.969 0 0012.545 2C7.021 2 2.543 6.477 2.543 12s4.478 10 10.002 10c8.396 0 10.249-7.85 9.426-11.748l-9.426-.013z'%3E%3C/path%3E%3C/svg%3E" alt="Google">
+                </div>
+                <div class="social-icon">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000000' d='M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.47-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.21 2.33-.91 3.57-.84 1.5.12 2.63.64 3.4 1.57-3.06 1.8-2.5 5.86.26 7.12-.64 1.94-1.65 3.87-2.31 4.32zm-5.38-15.9c.05-2.13 1.93-3.93 4.1-4.13.13 2.48-2.22 4.2-4.1 4.13z'%3E%3C/path%3E%3C/svg%3E" alt="Apple">
+                </div>
+                <div class="social-icon">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%231877F2' d='M24 12.073c0-5.8-4.702-10.5-10.5-10.5s-10.5 4.7-10.5 10.5c0 5.244 3.84 9.584 8.86 10.373v-7.337h-2.666v-3.036h2.666V9.405c0-2.633 1.568-4.085 3.966-4.085 1.15 0 2.35.205 2.35.205v2.584h-1.323c-1.304 0-1.71.81-1.71 1.64v1.97h2.912l-.465 3.036H15.14v7.337c5.02-.788 8.86-5.13 8.86-10.374z'%3E%3C/path%3E%3C/svg%3E" alt="Facebook">
+                </div>
+                <div class="social-icon">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%231DA1F2' d='M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.534-1.897.922-2.958 1.13-.85-.904-2.06-1.47-3.4-1.47-2.572 0-4.658 2.086-4.658 4.66 0 .364.042.718.12 1.06-3.873-.195-7.304-2.05-9.602-4.868-.4.69-.63 1.49-.63 2.342 0 1.616.823 3.043 2.072 3.878-.764-.025-1.482-.234-2.11-.583v.06c0 2.257 1.605 4.14 3.737 4.568-.392.106-.803.162-1.227.162-.3 0-.593-.028-.877-.082.593 1.85 2.313 3.198 4.352 3.234-1.595 1.25-3.604 1.995-5.786 1.995-.376 0-.747-.022-1.112-.065 2.062 1.323 4.51 2.093 7.14 2.093 8.57 0 13.255-7.098 13.255-13.254 0-.2-.005-.402-.014-.602.91-.658 1.7-1.477 2.323-2.41z'%3E%3C/path%3E%3C/svg%3E" alt="Twitter">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.signup-button').addEventListener('click', function() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            
+            // Basic email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Password validation
+            if (password.length < 6) {
+                alert('Password must be at least 6 characters long.');
+                return;
+            }
+            
+            // Confirm password
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return;
+            }
+            
+            alert('Sign up successful! In a real application, this would create your account.');
+        });
+    </script>
+</body>
+</html>

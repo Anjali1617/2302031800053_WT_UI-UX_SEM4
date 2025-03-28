@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Book Community</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #000;
+            background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: bottom;
+            background-blend-mode: soft-light;
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .nav-button {
+            background-color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .home { color: black; }
+        .signup, .login, .my-books, .contact, .review { color: red; }
+        
+        .page-title {
+            width: 50%;
+            max-width: 400px;
+            background-color: white;
+            color: #ff1493; /* Deep pink */
+            text-align: center;
+            padding: 12px;
+            margin: 0 auto 40px;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 30px;
+        }
+        
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 30px;
+        }
+        
+        .info-card {
+            background-color: #f0e68c; /* Khaki yellow */
+            border-radius: 10px;
+            padding: 25px;
+            width: 30%;
+            min-width: 250px;
+            height: fit-content;
+        }
+        
+        .info-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .info-text {
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .form-card {
+            background-color: #f0e68c; /* Khaki yellow */
+            border-radius: 10px;
+            padding: 30px;
+            width: 65%;
+        }
+        
+        .form-header {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        
+        .form-textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            background-color: #4169e1; /* Royal blue */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .submit-button:hover {
+            background-color: #3151b5;
+        }
+        
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+            }
+            
+            .info-card, .form-card {
+                width: 100%;
+            }
+            
+            .page-title {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <button class="nav-button home"><a href="4.html">Home</a></button>
+        <button class="nav-button signup"><a href="3.html">Sign Up</a></button>
+        <button class="nav-button login"><a href="2.html">Login</a></button>
+        <button class="nav-button my-books"><a href="6.html"> My Books</a> </button>
+        <button class="nav-button contact"><a href="7.html">Contact Us</a></button>
+        <button class="nav-button review"><a href="8.html">Review</a></button>
+    </div>
+    
+    <div class="page-title">CONTACT US</div>
+    
+    <div class="content-container">
+        <div class="info-card">
+            <div class="info-title">Contact Us</div>
+            <div class="info-text">
+                Not sure what you need? Discover and share amazing books with fellow readers—your next favorite read is just a recommendation away!"
+            </div>
+            
+            <div class="contact-detail">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                    </svg>
+                </div>
+                Companyname@gmail.com
+            </div>
+            
+            <div class="contact-detail">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                    </svg>
+                </div>
+                support:(+91) 9587465235
+            </div>
+        </div>
+        
+        <div class="form-card">
+            <div class="form-header">
+                We'd Love to Hear From You!<br>
+                Let's Get in Touch
+            </div>
+            
+            <form>
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-input" placeholder="Enter Name">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" placeholder="example@gmail.com">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Phone Number</label>
+                    <input type="tel" class="form-input" placeholder="(+91) 0000000000">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Address</label>
+                    <input type="text" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Your Message</label>
+                    <textarea class="form-textarea"></textarea>
+                </div>
+                
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Basic JavaScript functionality
+        document.querySelectorAll('.nav-button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Navigating to: ' + this.textContent);
+            });
+        });
+        
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

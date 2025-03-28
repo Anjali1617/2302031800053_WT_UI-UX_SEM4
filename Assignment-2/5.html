@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-image: url('https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 20px;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .nav-button {
+            background-color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .home { color: black; }
+        .signup { color: red; }
+        .login { color: red; }
+        .my-books { color: red; }
+        .contact { color: red; }
+        .review { color: red; }
+        
+        .suggestion-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .suggestion-button {
+            background-color: #FFE77A;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-weight: bold;
+            font-size: 16px;
+            color: red;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .suggestion-button:hover {
+            background-color: #FFD700;
+        }
+        
+        .books-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 10px;
+        }
+        
+        .book-card {
+            position: relative;
+            height: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .book-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .book-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        @media (max-width: 768px) {
+            .books-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .books-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <button class="nav-button home"><a href="4.html">Home</a></button>
+        <button class="nav-button signup"><a href="3.html">Sign Up</a></button>
+        <button class="nav-button login"><a href="2.html">Login</a></button>
+        <button class="nav-button my-books"><a href="6.html"> My Books</a> </button>
+        <button class="nav-button contact"><a href="7.html">Contact Us</a></button>
+        <button class="nav-button review"><a href="8.html">Review</a></button>
+    </div>
+    
+    <div class="suggestion-container">
+        <button class="suggestion-button">More Suggestion</button>
+    </div>
+    
+    <div class="books-container">
+        <div class="book-card">
+            <img src="https://th.bing.com/th/id/OIP.OK95YUY-34utRXqx_3xScwAAAA?pid=ImgDet&w=202&h=269&c=7&dpr=1.3">
+        </div>
+        <div class="book-card">
+            <img src="https://th.bing.com/th/id/OIP.PFL_40ocnRI2PVATFpX8kwAAAA?pid=ImgDet&w=202&h=307&c=7&dpr=1.3">
+        </div>
+        <div class="book-card">
+            <img src="https://th.bing.com/th/id/OIP.gBi7NsSMG1445nMZZ9bxuQAAAA?pid=ImgDet&w=202&h=286&c=7&dpr=1.3.jpg">
+        </div>
+        <div class="book-card">
+            <img src="https://th.bing.com/th/id/OIP.b3cRGYyi43D-dLj2SNANggAAAA?pid=ImgDet&w=202&h=286&c=7&dpr=1.3.jpg">
+        </div>
+        <div class="book-card">
+            <img src="https://th.bing.com/th/id/OIP.7N2JB3s8NhgDmYxJxDKT8gHaHa?pid=ImgDet&w=202&h=202&c=7&dpr=1.3">
+        </div>
+        <div class="book-card">
+            <img src="https://th.bing.com/th/id/OIP.rBCu9HEO6-PFZ-rXf789FgAAAA?pid=ImgDet&w=136&h=205&c=7&dpr=1.3">
+        </div>
+        <div class="book-card">
+            <img src="https://www.bing.com/images/blob?bcid=S-QQJ3NneUMI0Ew3C5B9OCVYT-mO.....6Y">
+        </div>
+        <div class="book-card">
+            <img src="https://www.bing.com/images/blob?bcid=SwjlZjWvHEMI0Ew3C5B9OCVYT-mO.....0k">
+        </div>
+    </div>
+
+    <script>
+        // Basic JavaScript functionality
+        document.querySelectorAll('.nav-button').forEach(button => {
+            button.addEventListener('click', function() {
+                alert('Navigating to: ' + this.textContent);
+                // In a real app, you would redirect to the appropriate page
+            });
+        });
+
+        document.querySelector('.suggestion-button').addEventListener('click', function() {
+            alert('Loading more book suggestions...');
+            // In a real app, you would load more books via AJAX
+        });
+
+        document.querySelectorAll('.book-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const bookTitle = this.querySelector('img').alt;
+                alert('Opening details for: ' + bookTitle);
+                // In a real app, you would redirect to a book details page
+            });
+        });
+    </script>
+</body>
+</html>
