@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a Review - Welcome to Paradise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-image: url('https://images.unsplash.com/photo-1610702873200-3105731c9682?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        
+        .page-title {
+            background-color: white;
+            padding: 12px 40px;
+            border-radius: 2px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .title-text {
+            color: #6a0dad; /* Purple */
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .book-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+        }
+        
+        .book-cover {
+            width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .book-title {
+            background-color: white;
+            padding: 10px 25px;
+            border-radius: 2px;
+            margin-bottom: 15px;
+            text-align: center;
+            min-width: 200px;
+        }
+        
+        .book-name {
+            color: #ff4500; /* Orange-red */
+            font-weight: bold;
+            font-size: 18px;
+        }
+        
+        .author-container {
+            background-color: white;
+            padding: 8px 20px;
+            border-radius: 2px;
+            margin-bottom: 20px;
+            text-align: center;
+            min-width: 150px;
+        }
+        
+        .author-name {
+            font-style: italic;
+        }
+        
+        .rating-container {
+            display: flex;
+            margin-bottom: 25px;
+        }
+        
+        .star {
+            width: 30px;
+            height: 30px;
+            margin: 0 2px;
+            color: #ffd700; /* Gold */
+            cursor: pointer;
+        }
+        
+        .star.filled {
+            color: #ffd700; /* Gold */
+        }
+        
+        .star.unfilled {
+            color: #d3d3d3; /* Light gray */
+        }
+        
+        .review-label {
+            background-color: white;
+            padding: 8px 25px;
+            border-radius: 2px;
+            margin-bottom: 15px;
+            align-self: flex-start;
+        }
+        
+        .review-textarea {
+            width: 100%;
+            min-height: 200px;
+            padding: 15px;
+            border: none;
+            border-radius: 2px;
+            resize: vertical;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .submit-button {
+            background-color: #4caf50; /* Green */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            margin-top: 10px;
+            align-self: center;
+        }
+        
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+        
+        @media (max-width: 500px) {
+            .book-cover {
+                width: 80%;
+            }
+            
+            .review-textarea {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-title">
+        <span class="title-text">Write a Review</span>
+    </div>
+    
+    <div class="book-container">
+        <img src="https://th.bing.com/th/id/OIP.HLfw_q7Im7uMstCY8c_ZbgAAAA?pid=ImgDet&w=202&h=310&c=7&dpr=1.3" alt="Welcome to Paradise by Twinkle Khanna" class="book-cover">
+        
+        <div class="book-title">
+            <span class="book-name">Book Name</span>
+        </div>
+        
+        <div class="author-container">
+            <span class="author-name">Author Name</span>
+        </div>
+        
+        <div class="rating-container">
+            <svg class="star filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            <svg class="star filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            <svg class="star filled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            <svg class="star unfilled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+            <svg class="star unfilled" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+            </svg>
+        </div>
+        
+        <div class="review-label">
+            <span>Review</span>
+        </div>
+        
+        <textarea class="review-textarea" placeholder="Write Your Review about this Book"></textarea>
+        
+        <button class="submit-button">Submit Review</button>
+    </div>
+
+    <script>
+        // Star rating functionality
+        const stars = document.querySelectorAll('.star');
+        
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                // Fill stars up to the clicked one
+                stars.forEach((s, i) => {
+                    if (i <= index) {
+                        s.classList.add('filled');
+                        s.classList.remove('unfilled');
+                    } else {
+                        s.classList.remove('filled');
+                        s.classList.add('unfilled');
+                    }
+                });
+            });
+        });
+        
+        // Submit review
+        document.querySelector('.submit-button').addEventListener('click', function() {
+            const reviewText = document.querySelector('.review-textarea').value;
+            if (!reviewText.trim()) {
+                alert('Please write your review before submitting.');
+                return;
+            }
+            
+            // Count filled stars for rating
+            const rating = document.querySelectorAll('.star.filled').length;
+            
+            alert(`Thank you for your ${rating}-star review! Your feedback has been submitted.`);
+            document.querySelector('.review-textarea').value = '';
+        });
+    </script>
+</body>
+</html>
